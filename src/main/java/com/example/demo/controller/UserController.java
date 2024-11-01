@@ -61,7 +61,10 @@ public class UserController {
 
     @GetMapping("/logout")
     public String logout(HttpSession session) {
-//        log.info("controller--" + dto.getId() + "가 로그인 실패");  -- dto를 가져와야겠구나
+//        log.info("controller--" + session의 loginUser 객체 getId  + "가 로그인 실패");  // dto를 가져와야겠구나
+        UserDto loginUser = (UserDto) session.getAttribute("loginUser");
+        log.info("controller--" + loginUser.getId()  + "가 로그인 실패");
+//        log.info("controller--" + session.getId()  + "가 로그인 실패 2");
         session.invalidate();
         return "redirect:/";
     }

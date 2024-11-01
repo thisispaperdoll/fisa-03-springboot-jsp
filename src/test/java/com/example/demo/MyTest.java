@@ -18,7 +18,7 @@ public class MyTest {
         // Then
         // 예상 결과 확인
 //         assertTrue(false);
-        assertEquals(2, result, "1 + 1 should equal 2");
+        assertEquals(4, result, "3 + 1 should equal 4");
     }
 
 
